@@ -13,6 +13,6 @@ describe('VideoPlayer' , () => {
   });
 
   it('has the right class', () => {
-    expect(component).to.have.class('video-player');
+    expect(component).to.have.class('video-player-component');
   });
 });

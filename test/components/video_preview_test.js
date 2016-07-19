@@ -13,6 +13,6 @@ describe('VideoPreview' , () => {
   });
 
   it('has the right class', () => {
-    expect(component).to.have.class('video-preview');
+    expect(component).to.have.class('video-preview-component');
   });
 });

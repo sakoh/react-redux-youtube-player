@@ -1,7 +1,7 @@
 import { renderComponent , expect } from '../test_helper';
 import VideoPreviewList from '../../src/components/video_preview_list';
 
-describe('VideoPreview' , () => {
+describe('VideoPreviewList' , () => {
   let component;
 
   beforeEach(() => {
@@ -13,6 +13,6 @@ describe('VideoPreview' , () => {
   });
 
   it('has the right class', () => {
-    expect(component).to.have.class('video-preview-list');
+    expect(component).to.have.class('video-preview-list-component');
   });
 });
