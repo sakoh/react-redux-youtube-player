@@ -1,11 +1,11 @@
 import { renderComponent , expect } from '../test_helper';
-import App from '../../src/components/app';
+import VideoPreviewList from '../../src/components/video_preview_list';
 
-describe('App' , () => {
+describe('VideoPreview' , () => {
   let component;
 
   beforeEach(() => {
-    component = renderComponent(App);
+    component = renderComponent(VideoPreviewList);
   });
 
   it('renders something', () => {
@@ -13,6 +13,6 @@ describe('App' , () => {
   });
 
   it('has the right class', () => {
-    expect(component).to.have.class('app-component');
+    expect(component).to.have.class('video-preview-list');
   });
 });

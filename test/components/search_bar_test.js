@@ -1,11 +1,11 @@
 import { renderComponent , expect } from '../test_helper';
-import App from '../../src/components/app';
+import SearchBar from '../../src/components/search_bar';
 
-describe('App' , () => {
+describe('SearchBar' , () => {
   let component;
 
   beforeEach(() => {
-    component = renderComponent(App);
+    component = renderComponent(SearchBar);
   });
 
   it('renders something', () => {
@@ -13,6 +13,6 @@ describe('App' , () => {
   });
 
   it('has the right class', () => {
-    expect(component).to.have.class('app-component');
+    expect(component).to.have.class('search-bar-component');
   });
 });
