@@ -1,10 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-
-const App = () => {
-  return (
-    <div>Hi!</div>
-  );
-}
+import App from './components/app';
 
 render(<App/>, document.querySelector('.container'));
