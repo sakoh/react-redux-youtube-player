@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
 export default class VideoPreview extends Component {
+
   render() {
+    const { title } = this.props;
+
     return (
-      <div className="video-preview-component">Video Preview</div>
+      <li className="video-preview-component">{title}</li>
     );
   }
 }
