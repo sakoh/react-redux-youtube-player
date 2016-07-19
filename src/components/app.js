@@ -7,16 +7,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="app-component">
+        <SearchBar/>
         <div className="row">
-          <SearchBar/>
-        </div>
-        <div className="row">
-          <div className="col-md-8">
-            <VideoPlayer/>
-          </div>
-          <div className="col-md-4">
-            <VideoPreviewList/>
-          </div>
+          <VideoPlayer/>
+          <VideoPreviewList/>
         </div>
       </div>
     );
