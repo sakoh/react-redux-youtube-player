@@ -13,7 +13,6 @@ const VideoPreview = ({ title, thumbnails: { default: { url } } }) => {
       </div>
     </li>
   );
-
 }
 
 export default VideoPreview;
