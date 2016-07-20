@@ -10,12 +10,17 @@ import VideoPreviewList from './video_preview_list';
 
 class App extends Component {
   componentWillMount() {
-
     this.props.searchVideos('surfboards');
   }
 
   render() {
     const { videos, selectedVideo } = this.props;
+
+    if(!videos || !selectedVideo) {
+      return (
+        <div>...Loading</div>
+      );
+    }
 
     return (
       <div className="app-component">

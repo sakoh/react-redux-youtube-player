@@ -9,7 +9,7 @@ class VideoPreview extends Component {
     const { snippet: { title, thumbnails: { default: { url } } } } = video;
 
     return (
-      <li onClick={video => selectVideo(video)} className="list-group-item video-preview-component">
+      <li onClick={() => selectVideo(video)} className="list-group-item video-preview-component">
         <div className="video-list media">
           <div className="media-left">
             <img className="media-object" src={url} />

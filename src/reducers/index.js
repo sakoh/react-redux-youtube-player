@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import videosReducer from './videosReducer';
 
 const rootReducer = combineReducers({
-  videos: videosReducer
+  video: videosReducer
 });
 
 export default rootReducer;

@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import VideoPreview from './video_preview';
 
-const VideoPreviewList = (props) => {
-  const videosList = props.videos.map((video) => {
-    return (
-      <VideoPreview
-        key={video.etag}
-        video={video} />
-    );
-  });
+class VideoPreviewList extends Component {
+  render() {
 
-  return (
-    <ul className="col-md-4 list-group">
-      {videosList}
-    </ul>
-  );
-};
+    const videosList = this.props.videos.map(video =>
+      <VideoPreview key={video.etag} video={video} />
+    );
+
+    return (
+      <ul className="col-md-4 list-group">
+        {videosList}
+      </ul>
+    );
+  }
+}
 
 export default VideoPreviewList;

@@ -6,7 +6,7 @@ import * as actions from '../actions';
 class SearchBar extends Component {
 
   onInputChange(term) {
-    debounce(() => { this.props.searchVideos(term); }, 300);
+    debounce(this.props.searchVideos(term), 300);
   }
 
   render() {
