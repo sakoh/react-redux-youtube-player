@@ -1,25 +1,40 @@
-# ReduxSimpleStarter
+# React Redux Youtube Player
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+A [React](https://facebook.github.io/react/) Youtube Player implemented using [Redux](https://www.udemy.com/react-redux/)?
 
-###Getting Started###
 
-There are two methods for getting started with this repo.
-
-####Familiar with Git?#####
+## Getting Started
 Checkout this repo, install dependencies, then start the gulp process with the following:
 
 ```
-	> git clone git@github.com:StephenGrider/ReduxSimpleStarter.git
-	> cd ReduxSimpleStarter
+	> git clone git@github.com:sakoh/react-redux-youtube-player.git
+	> cd react-redux-youtube-player
 	> npm install
 	> npm start
 ```
 
-####Not Familiar with Git?#####
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+## Testing
 
 ```
-	> npm install
-	> npm start
+	> npm run selenium
+  > npm run test
+```
+
+#### Unit Testing
+
+```
+	> npm run test:unit
+```
+
+Watch unit tests:
+```
+	> npm run test:unit:watch
+```
+
+
+#### End-to-End Testing
+
+```
+	> npm run selenium
+  > npm run test:e2e
 ```
