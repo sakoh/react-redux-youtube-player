@@ -1,18 +1,20 @@
 import React from 'react';
 
-const VideoPreview = ({ title, thumbnails: { default: { url } } }) => {
+const VideoPreview = ({video, onVideoSelect}) => {
+  const imageUrl = video.snippet.thumbnails.default.url;
+
   return (
-    <li className="video-preview-component list-group-item">
-      <div className="media">
+    <li onClick={() => onVideoSelect(video)} className="list-group-item">
+      <div className="video-list media">
         <div className="media-left">
-          <img className="media-object" src={url} alt=""/>
+          <img className="media-object" src={imageUrl} />
         </div>
         <div className="media-body">
-          <div className="media-heading">{title}</div>
+          <div className="media-heading">{video.snippet.title}</div>
         </div>
       </div>
     </li>
   );
-}
+};
 
 export default VideoPreview;

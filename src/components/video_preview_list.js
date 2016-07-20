@@ -1,14 +1,18 @@
 import React from 'react';
 import VideoPreview from './video_preview';
 
-const VideoPreviewList = ({ videos }) => {
-
-  const videosList = videos.map(({ etag, snippet }) =>
-    <VideoPreview key={etag} {...snippet}/>
-  );
+const VideoPreviewList = (props) => {
+  const videosList = props.videos.map((video) => {
+    return (
+      <VideoPreview
+        onVideoSelect={props.onVideoSelect}
+        key={video.etag}
+        video={video} />
+    );
+  });
 
   return (
-    <ul className="video-preview-list-component col-md-4 list-group">
+    <ul className="col-md-4 list-group">
       {videosList}
     </ul>
   );
