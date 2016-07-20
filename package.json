@@ -6,8 +6,10 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch",
+    "test:unit": "mocha --compilers js:babel-core/register --require ./test/unit/test_helper.js --recursive ./test/unit",
+    "test:unit:watch": "npm run test -- --watch",
+    "test:e2e": "node_modules/webdriverio/bin/wdio wdio.conf.js",
+    "test": "npm run test:unit; npm run test:e2e",
     "selenium": "java -jar ./selenium/selenium-server-standalone-2.53.1.jar"
   },
   "author": "",
@@ -23,6 +25,7 @@
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
+    "webdriverio": "^4.2.1",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
