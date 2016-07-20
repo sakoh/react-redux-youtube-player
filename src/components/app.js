@@ -1,48 +1,38 @@
 import { debounce } from 'lodash';
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
+import { connect } from 'react-redux';
+
+import * as actions from '../actions';
 import SearchBar from './search_bar';
 import VideoPlayer from './video_player';
 import VideoPreviewList from './video_preview_list';
 
-const API_KEY = "AIzaSyAOCM2eRhEOZUSJamIDZ5NNK03P9k3Zl_4";
+class App extends Component {
+  componentWillMount() {
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      videos: [],
-      selectedVideo: null
-    };
-
-    this.videoSearch('surfboards');
-  }
-
-  videoSearch(term) {
-    YTSearch({ key: API_KEY, term }, (videos) => {
-      this.setState({
-        videos,
-        selectedVideo: videos[0]
-      });
-    });
+    this.props.searchVideos('surfboards');
   }
 
   render() {
-    const { videos, selectedVideo } = this.state;
-    const videoSearch = debounce(term => { this.videoSearch(term) }, 300);
+    const { videos, selectedVideo } = this.props;
 
     return (
       <div className="app-component">
-        <SearchBar onSearchTermChange={videoSearch}/>
+        <SearchBar/>
         <div className="row">
           <VideoPlayer
             video={selectedVideo} />
           <VideoPreviewList
-            onVideoSelect={selectedVideo => this.setState({ selectedVideo })}
             videos={videos} />
         </div>
       </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return { videos: state.video.videos, selectedVideo: state.video.selectedVideo };
+}
+
+export default connect(mapStateToProps, actions)(App);

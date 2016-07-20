@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const VideoPlayer = ({ video }) => {
   if(!video) {
-    return <div>...Loading</div>;
+    return (
+      <div>...Loading</div>
+    );
   }
 
   const { snippet: { title, description }, id: { videoId } } = video;

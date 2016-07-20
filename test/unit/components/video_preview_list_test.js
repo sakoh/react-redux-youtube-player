@@ -1,5 +1,5 @@
 import { renderComponent , expect } from '../test_helper';
-import VideoPreviewList from '../../src/components/video_preview_list';
+import VideoPreviewList from '../../../src/components/video_preview_list';
 
 describe('VideoPreviewList' , () => {
   let component;

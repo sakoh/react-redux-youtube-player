@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { debounce } from 'lodash';
+import * as actions from '../actions';
 
-export default class SearchBar extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = { term: "" };
-  }
+class SearchBar extends Component {
 
   onInputChange(term) {
-    this.setState({ term });
-    this.props.onSearchTermChange(term);
+    debounce(() => { this.props.searchVideos(term); }, 300);
   }
 
   render() {
@@ -18,7 +14,6 @@ export default class SearchBar extends Component {
       <div className="search-bar-component form-group row">
         <input
           className="form-control"
-          value={this.state.term}
           onChange={event => this.onInputChange(event.target.value)}
           type="text"
           placeholder="Search"/>
@@ -26,3 +21,5 @@ export default class SearchBar extends Component {
     );
   }
 }
+
+export default connect(null, actions)(SearchBar);

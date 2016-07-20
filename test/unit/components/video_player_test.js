@@ -1,5 +1,5 @@
 import { renderComponent , expect } from '../test_helper';
-import VideoPlayer from '../../src/components/video_player';
+import VideoPlayer from '../../../src/components/video_player';
 
 describe('VideoPlayer' , () => {
   let component;

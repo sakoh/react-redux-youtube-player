@@ -5,7 +5,6 @@ const VideoPreviewList = (props) => {
   const videosList = props.videos.map((video) => {
     return (
       <VideoPreview
-        onVideoSelect={props.onVideoSelect}
         key={video.etag}
         video={video} />
     );

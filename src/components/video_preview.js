@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
-const VideoPreview = ({ video, onVideoSelect }) => {
-  const imageUrl = video.snippet.thumbnails.default.url;
+class VideoPreview extends Component {
 
-  return (
-    <li onClick={() => onVideoSelect(video)} className="list-group-item video-preview-component">
-      <div className="video-list media">
-        <div className="media-left">
-          <img className="media-object" src={imageUrl} />
+  render() {
+    const { video, selectVideo } = this.props;
+    const { snippet: { title, thumbnails: { default: { url } } } } = video;
+
+    return (
+      <li onClick={video => selectVideo(video)} className="list-group-item video-preview-component">
+        <div className="video-list media">
+          <div className="media-left">
+            <img className="media-object" src={url} />
+          </div>
+          <div className="media-body">
+            <div className="media-heading">{title}</div>
+          </div>
         </div>
-        <div className="media-body">
-          <div className="media-heading">{video.snippet.title}</div>
-        </div>
-      </div>
-    </li>
-  );
-};
+      </li>
+    );
+  }
 
-export default VideoPreview;
+}
+
+export default connect(null, actions)(VideoPreview);
