@@ -11,7 +11,9 @@ const VideoPlayer = ({ video }) => {
 
   return (
     <div className="video-player-component col-md-8">
-      <iframe className="embed-responsive-item" src={url}></iframe>
+      <div className="embed-responsive embed-responsive-16by9">
+        <iframe className="embed-responsive-item" src={url}></iframe>
+      </div>
       <div className="details">
         <strong>{title}</strong>
         <p>{description}</p>
