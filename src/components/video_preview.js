@@ -1,12 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class VideoPreview extends Component {
+const VideoPreview = ({ title, thumbnails: { default: { url } } }) => {
+  return (
+    <li className="video-preview-component list-group-item">
+      <div className="media">
+        <div className="media-left">
+          <img className="media-object" src={url} alt=""/>
+        </div>
+        <div className="media-body">
+          <div className="media-heading">{title}</div>
+        </div>
+      </div>
+    </li>
+  );
 
-  render() {
-    const { title } = this.props;
-
-    return (
-      <li className="video-preview-component">{title}</li>
-    );
-  }
 }
+
+export default VideoPreview;
