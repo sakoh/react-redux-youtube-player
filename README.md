@@ -1,6 +1,6 @@
 # React Redux Youtube Player
 
-A [React](https://facebook.github.io/react/) Youtube Player implemented using [Redux](https://www.udemy.com/react-redux/)?
+A [React](https://facebook.github.io/react/) Youtube Player implemented using [Redux](https://www.udemy.com/react-redux/)
 
 
 ## Getting Started
