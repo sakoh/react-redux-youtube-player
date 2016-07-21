@@ -7,10 +7,10 @@ A [React](https://facebook.github.io/react/) Youtube Player implemented using [R
 Checkout this repo, install dependencies, then start the gulp process with the following:
 
 ```
-	> git clone git@github.com:sakoh/react-redux-youtube-player.git
-	> cd react-redux-youtube-player
-	> npm install
-	> npm start
+  > git clone git@github.com:sakoh/react-redux-youtube-player.git
+  > cd react-redux-youtube-player
+  > npm install
+  > npm start
 ```
 
 ## Testing
@@ -23,18 +23,18 @@ Checkout this repo, install dependencies, then start the gulp process with the f
 #### Unit Testing
 
 ```
-	> npm run test:unit
+  > npm run test:unit
 ```
 
 Watch unit tests:
 ```
-	> npm run test:unit:watch
+  > npm run test:unit:watch
 ```
 
 
 #### End-to-End Testing
 
 ```
-	> npm run selenium
+  > npm run selenium
   > npm run test:e2e
 ```
