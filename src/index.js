@@ -8,7 +8,7 @@ import App from './components/app';
 import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-const store = createStoreWithMiddleware(reducers);
+const store = createStoreWithMiddleware(reducers, window.devToolsExtension && window.devToolsExtension());
 
 render(
   <Provider store={store}>
