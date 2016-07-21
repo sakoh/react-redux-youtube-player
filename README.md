@@ -16,7 +16,7 @@ Checkout this repo, install dependencies, then start the gulp process with the f
 ## Testing
 
 ```
-	> npm run selenium
+  > npm run selenium
   > npm run test
 ```
 
