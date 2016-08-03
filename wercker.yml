@@ -31,3 +31,10 @@ build:
     # and the code value contains the command that get executed
     - mitelone/webpack@0.0.1:
       config-file: webpack.config.js
+
+deploy:
+  steps:
+    - heroku-deploy:
+        key: 88b7607d-ccac-4aa3-bc8a-65983e6f4632
+        user: sakohartounian@yahoo.com
+        app-name: react-redux-youtube-player
