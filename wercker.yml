@@ -30,4 +30,4 @@ build:
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
     - mitelone/webpack@0.0.1:
-      config-file: mywebpack.config.js
+      config-file: webpack.config.js
