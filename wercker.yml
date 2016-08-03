@@ -35,6 +35,6 @@ build:
 deploy:
   steps:
     - heroku-deploy:
-        key: 88b7607d-ccac-4aa3-bc8a-65983e6f4632
-        user: sakohartounian@yahoo.com
-        app-name: react-redux-youtube-player
+        key: $HEROKU_KEY
+        user: $HEROKU_USER
+        app-name: $HEROKU_APP_NAME
