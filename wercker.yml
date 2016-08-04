@@ -34,6 +34,7 @@ build:
 
 deploy:
   steps:
+    - wercker/heroku-deploy@3.0.1
     - heroku-deploy:
         key: $HEROKU_KEY
         user: $HEROKU_USER
