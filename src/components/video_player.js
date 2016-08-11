@@ -7,7 +7,9 @@ export default function VideoPlayer({ video }) {
     );
   }
 
-  const { snippet: { title, description }, id: { videoId } } = video;
+  const {
+    snippet: { title, description }, id: { videoId }
+  } = video;
 
   const url = `https://youtube.com/embed/${videoId}`;
 
