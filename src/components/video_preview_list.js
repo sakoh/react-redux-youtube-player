@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import VideoPreview from './video_preview';
 
 export default function VideoPreviewList({ videos }) {
