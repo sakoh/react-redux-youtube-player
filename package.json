@@ -24,6 +24,7 @@
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
+    "wdio-mocha-framework": "^0.4.0",
     "wdio-spec-reporter": "0.0.3",
     "webdriverio": "^4.2.1",
     "webpack": "^1.12.9",

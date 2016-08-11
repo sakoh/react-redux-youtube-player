@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import VideoPreview from './video_preview';
 
-const VideoPreviewList = ({ videos }) => {
+export default function VideoPreviewList({ videos }) {
 
   const videosList = videos.map(video =>
     <VideoPreview key={video.etag} video={video} />
@@ -13,5 +13,3 @@ const VideoPreviewList = ({ videos }) => {
     </ul>
   );
 }
-
-export default VideoPreviewList;

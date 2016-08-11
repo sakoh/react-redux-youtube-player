@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VideoPlayer = ({ video }) => {
+export default function VideoPlayer({ video }) {
   if(!video) {
     return (
       <div>...Loading</div>
@@ -23,5 +23,3 @@ const VideoPlayer = ({ video }) => {
     </div>
   );
 };
-
-export default VideoPlayer;
