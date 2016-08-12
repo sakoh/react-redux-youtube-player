@@ -6,7 +6,7 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "deploy": "gh-pages -d build",
+    "deploy": "webpack webpack.config.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/unit/test_helper.js --recursive ./test/unit",
     "test:watch": "npm run test --watch",
     "test:e2e": "node_modules/webdriverio/bin/wdio wdio.conf.js",
