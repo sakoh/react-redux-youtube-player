@@ -1,13 +1,15 @@
 import React from 'react';
 
-const VideoPlayer = ({ video }) => {
+export default function VideoPlayer({ video }) {
   if(!video) {
     return (
       <div>...Loading</div>
     );
   }
 
-  const { snippet: { title, description }, id: { videoId } } = video;
+  const {
+    snippet: { title, description }, id: { videoId }
+  } = video;
 
   const url = `https://youtube.com/embed/${videoId}`;
 
@@ -23,5 +25,3 @@ const VideoPlayer = ({ video }) => {
     </div>
   );
 };
-
-export default VideoPlayer;
