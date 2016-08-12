@@ -27,15 +27,14 @@ build:
     # A step that executes `npm test` command
     # - npm-test
 
-    # A custom script step, name value is used in the UI
-    # and the code value contains the command that get executed
-    - mitelone/webpack@0.0.1:
-      config-file: webpack.config.js
-
 deploy:
   steps:
-    - wercker/heroku-deploy@3.0.1
-    - heroku-deploy:
-        key: $HEROKU_KEY
-        user: $HEROKU_USER
-        app-name: $HEROKU_APP_NAME
+    # - wercker/heroku-deploy@3.0.1
+    # - heroku-deploy:
+    #     key: $HEROKU_KEY
+    #     user: $HEROKU_USER
+    #     app-name: $HEROKU_APP_NAME
+
+    - script:
+        name: build
+        code: webpack webpack.config.js
