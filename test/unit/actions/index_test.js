@@ -4,14 +4,24 @@ import { SEARCH_VIDEOS, SELECT_VIDEO } from '../../../src/actions/types';
 
 describe('Action Creators', () => {
   describe('searchVideos', () => {
-    it('should have the action.type SEARCH_VIDEOS', () => {
+    it('should have the action.type SEARCH_VIDEOS', done => {
       const action = searchVideos('Batman');
-      expect(action.type).to.be.equal(SEARCH_VIDEOS);
+
+      action(object => {
+        expect(object.type).to.be.equal(SEARCH_VIDEOS);
+        done();
+      });
     });
 
-    it('should return its parameter as its payload', () => {
+    it('selects the first video in the search result', done => {
       const action = searchVideos('Batman');
-      expect(action.payload).to.be.equal('Batman');
+
+      action(object => {
+        const { selectedVideo, videos } = object.payload;
+
+        expect(selectedVideo).to.be.equal(videos[0]);
+        done();
+      });
     });
   });
 });
